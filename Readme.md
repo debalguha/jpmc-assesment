@@ -23,16 +23,3 @@ Parser combinator allows customization of parsing logic easily by combining/sequ
     - java -jar target/jpmc-assesment-1.0-SNAPSHOT-jar-with-dependencies.jar <path_of_the_file>
 
 ## Please ensure at least java 8 is installed
-
-
-
-
-This project is example of using [Spring Cloud Gateway](https://spring.io/projects/spring-cloud-gateway) as an edge
-service with a Spring Boot application. Spring Cloud Gateway provides means for routing an incoming request to a
-matching downstream service.
-
-Gateway is a suitable replacement for [Spring Cloud Netflix Zuul](https://spring.io/projects/spring-cloud-netflix) since
-the latter module is now in maintenance mode starting Spring Cloud Greenwich (2.1.0) release train. Spring Cloud will
-continue to support Zuul for a period of at least a year from the general availability of the Greenwich release train.
-Putting a module in the maintenance mode means that the Spring Cloud will no longer add any new feature but will fix
-blocker bugs and security issues.
