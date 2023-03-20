@@ -29,7 +29,7 @@ public class ParserCombinatorTestV2 {
                 .nextStage(new SkipOneCharactersParserStage())
                 .nextStage(new DateFormatParserStage("ddMMyyyy", fun.apply("([a-zA-Z0-9]+)_.*")))
                 .nextStage(new SkipOneCharactersParserStage())
-                .nextStage(new DigitParseStage(2, fun.apply("^([0-9]+)\\..*")))
+                .nextStage(new DigitParserStage(2, fun.apply("^([0-9]+)\\..*")))
                 .nextStage(new SkipOneCharactersParserStage())
                 .nextStage(new FileExtensionParserStage("csv"))
                 .build();

@@ -7,6 +7,7 @@ import com.jpmc.assessment2.parser.PartExtractor;
 import com.jpmc.assessment2.parser.error.ParseError;
 import com.jpmc.assessment2.parser.error.impl.ParseErrorImpl;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class PortfolioCodeParserStage implements ParserStage {
@@ -15,7 +16,7 @@ public class PortfolioCodeParserStage implements ParserStage {
     final PartExtractor partExtractor;
 
     public PortfolioCodeParserStage(PartExtractor partExtractor, Character... validPortfolioCodes) {
-        this.validPortfolioCodes = List.of(validPortfolioCodes);
+        this.validPortfolioCodes = Arrays.asList(validPortfolioCodes);
         this.partExtractor = partExtractor;
     }
 

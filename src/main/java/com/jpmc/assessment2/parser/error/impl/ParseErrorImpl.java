@@ -17,7 +17,7 @@ public class ParseErrorImpl implements ParseError {
 
     @Override
     public String getErrorMessage(String fileName) {
-        return errorMessageTemplate.formatted(fileName, invalidText);
+        return String.format(errorMessageTemplate, fileName, invalidText);
     }
 
     @Override

@@ -7,12 +7,12 @@ import com.jpmc.assessment2.parser.PartExtractor;
 import com.jpmc.assessment2.parser.error.ParseError;
 import com.jpmc.assessment2.parser.error.impl.ParseErrorImpl;
 
-public class DigitParseStage implements ParserStage {
+public class DigitParserStage implements ParserStage {
     static final String ERROR_TEMPLATE = "File '%s' failed validation. Double digit sequence code expected but found %s .";
     final int numDigitsAllowed;
     final PartExtractor partExtractor;
 
-    public DigitParseStage(int numDigitsAllowed, PartExtractor partExtractor) {
+    public DigitParserStage(int numDigitsAllowed, PartExtractor partExtractor) {
         this.numDigitsAllowed = numDigitsAllowed;
         this.partExtractor = partExtractor;
     }
