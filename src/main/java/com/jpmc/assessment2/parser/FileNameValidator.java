@@ -1,6 +1,8 @@
 package com.jpmc.assessment2.parser;
 
-import com.jpmc.assessment.parser.ParserCombinator;
+
+import com.jpmc.assessment2.parser.error.ParseError;
+import com.jpmc.assessment2.parser.util.Either;
 
 import java.io.File;
 import java.util.logging.Logger;
@@ -14,8 +16,14 @@ public class FileNameValidator {
             System.exit(1);
         } else {
             final String filePath = args[0];
-            final String fileName = filePath.substring(filePath.lastIndexOf(File.pathSeparatorChar));
-            final ParserCombinator fileNameValidationParser = ParserCombinatorFactory.buildOneForFileNameValidation();
+            final String fileName = filePath.substring(filePath.lastIndexOf(File.separator) + 1);
+            Either<ParseError, ParseSuccess> validationResult = ParserCombinatorFactory.buildOneForFileNameValidation()
+                    .apply(fileName);
+            if(validationResult.isRight()) {
+                LOGGER.info(String.format("File %s passed validation", fileName));
+            } else {
+                LOGGER.severe(validationResult.leftValue().getErrorMessage(fileName));
+            }
 
         }
     }
