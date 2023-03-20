@@ -18,9 +18,9 @@ Parser combinator allows customization of parsing logic easily by combining/sequ
 
 ## Building and running
 
-Two ways of running the program
-    1. ./mvnw compile exec:java -Dexec.mainClass="com.jpmc.assessment2.parser.FileNameValidator" -Dexec.args="<path_of_the_file>"
-    2. java -jar target/jpmc-assesment-1.0-SNAPSHOT-jar-with-dependencies.jar <path_of_the_file>
+## Two ways of running the program
+    - ./mvnw compile exec:java -Dexec.mainClass="com.jpmc.assessment2.parser.FileNameValidator" -Dexec.args="<path_of_the_file>"
+    - java -jar target/jpmc-assesment-1.0-SNAPSHOT-jar-with-dependencies.jar <path_of_the_file>
 
 ## Please ensure at least java 8 is installed
 
